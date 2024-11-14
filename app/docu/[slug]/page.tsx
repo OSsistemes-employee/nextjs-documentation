@@ -16,7 +16,7 @@ async function getPost(slug: string) {
   return { frontmatter: data, content };
 }
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const files = fs.readdirSync(path.join(process.cwd(), "content"));
   return files.map((filename) => ({
     slug: filename.replace(".md", ""),
