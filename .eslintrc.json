@@ -1,3 +1,11 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": ["warn"],  // Cambiar a "warn" para solo advertir, no generar error
+    "no-unused-vars": "off"  // Desactivar la regla para JavaScript
+  }
 }
