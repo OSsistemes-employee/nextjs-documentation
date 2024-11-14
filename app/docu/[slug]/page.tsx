@@ -23,13 +23,13 @@ export async function generateStaticParams() {
   }));
 }
 
-interface PostPageParams {
+type PostPageParams = {
   slug: string;
   fileList: { slug: string }[];
-}
+};
 
 export default async function PostPage({ params }: { params: PostPageParams }) {
-  const { slug } = await params;
+  const { slug } = params;
   const { content } = await getPost(slug);
 
   return (
