@@ -27,7 +27,7 @@ type PostPageParams = {
   slug: string;
 };
 
-export default async function PostPage({ params }) {
+export default async function PostPage({ params }: { params: PostPageParams }) {
   const { slug } = params;
   const { content } = await getPost(slug);
 
