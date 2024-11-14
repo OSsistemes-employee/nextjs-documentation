@@ -16,7 +16,7 @@ async function getPost(slug: string) {
   return { frontmatter: data, content };
 }
 
-export async function generateStaticParams(): Promise<{ slug: string }[]> {
+export async function generateStaticParams() {
   const files = fs.readdirSync(path.join(process.cwd(), "content"));
   return files.map((filename) => ({
     slug: filename.replace(".md", ""),
@@ -27,7 +27,7 @@ type PostPageParams = {
   slug: string;
 };
 
-export default async function PostPage({ params }: { params: PostPageParams }) {
+export default async function PostPage({ params }) {
   const { slug } = await params;
   const { content } = await getPost(slug);
 
