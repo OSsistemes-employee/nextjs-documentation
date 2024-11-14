@@ -23,10 +23,6 @@ export async function generateStaticParams() {
   }));
 }
 
-type PostPageParams = {
-  slug: string;
-};
-
 export default async function PostPage({ params }) {
   const { slug } = await params;
   const { content } = await getPost(slug);
@@ -35,12 +31,13 @@ export default async function PostPage({ params }) {
     <div className="min-h-screen flex justify-center bg-gray-100">
       <div className="w-64 bg-white p-4 h-screen">
         <SideMenu />
-        MENU
       </div>
-      {/* <div className="layout-scrollbar flex items-center justify-center">
-        <div className="markdown-body max-w-3xl mx-auto p-6 w-full bg-white text-slate-900"> */}
-      <div className="flex-1 p-6 bg-white text-slate-900 max-w-3xl">
-        <div className="markdown-body max-w-full mx-auto">
+      <div className="w-1 bg-gradient-to-b from-white via-gray-200 to-white"></div>
+      <div className="flex-1 p-6 bg-white text-slate-900 max-w-3xl h-screen overflow-y-auto custom-scrollbar">
+        <div className="flex flex-col gap-4 markdown-body max-w-full mx-auto">
+          <div className="text-3xl font-bold">
+            {slug.charAt(0).toUpperCase() + slug.slice(1)}
+          </div>
           <ReactMarkdown
             rehypePlugins={[rehypeHighlight]}
             components={{

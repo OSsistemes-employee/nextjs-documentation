@@ -13,8 +13,9 @@ export default async function SideMenu() {
   const files = await getFilesList();
 
   return (
-    <div className="w-full max-w-[260px] px-1 py-2 ">
+    <div className="w-full max-w-[260px] px-1 py-8">
       <div className="space-y-2">
+        <div className="text-xl font-bold">Menu Documentation</div>
         {files.map((file) => (
           <div key={file.slug} className="flex items-center">
             <span className="mr-2 text-xl">•</span>
@@ -22,7 +23,7 @@ export default async function SideMenu() {
               href={`/docu/${file.slug}`}
               className="text-lg hover:underline"
             >
-              {file.slug}
+              {file.slug.charAt(0).toUpperCase() + file.slug.slice(1)}
             </Link>
           </div>
         ))}
