@@ -25,10 +25,9 @@ export async function generateStaticParams() {
 
 type PostPageParams = {
   slug: string;
-  fileList: { slug: string }[];
 };
 
-export default async function PostPage({ params }: { params: PostPageParams }) {
+export default async function PostPage({ params }) {
   const { slug } = params;
   const { content } = await getPost(slug);
 
