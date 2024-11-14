@@ -1,0 +1,38 @@
+/* custom-scrollbar.css */
+
+/* Estilos de scrollbar específicos para el layout */
+.layout-scrollbar::-webkit-scrollbar {
+    width: 8px; /* Ancho del scrollbar */
+}
+
+.layout-scrollbar::-webkit-scrollbar-track {
+    background: transparent; /* Fondo del track (zona fuera del scroll) */
+}
+
+.layout-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #d1d5db; /* Color gris claro del scroll (bg-gray-300) */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.layout-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #9ca3af; /* Color gris más oscuro al hacer hover (bg-gray-400) */
+}
+
+/* Para Firefox */
+.layout-scrollbar {
+    scrollbar-color: #d1d5db transparent; /* Color del thumb y fondo transparente */
+    scrollbar-width: thin; /* Scroll delgado */
+}
+
+/* custom-scrollbar.css */
+
+.markdown-body pre {
+    padding: 0.25rem; /* p-1 */
+    margin: 0px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.markdown-body code {
+    padding: 0.25rem 0.5rem; /* px-1 py-1 */
+}
