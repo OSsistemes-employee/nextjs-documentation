@@ -28,13 +28,14 @@ type PostPageParams = {
 };
 
 export default async function PostPage({ params }: { params: PostPageParams }) {
-  const { slug } = params;
+  const { slug } = await params;
   const { content } = await getPost(slug);
 
   return (
     <div className="min-h-screen flex justify-center bg-gray-100">
       <div className="w-64 bg-white p-4 h-screen">
-        <SideMenu />
+        {/* <SideMenu /> */}
+        MENU
       </div>
       {/* <div className="layout-scrollbar flex items-center justify-center">
         <div className="markdown-body max-w-3xl mx-auto p-6 w-full bg-white text-slate-900"> */}
