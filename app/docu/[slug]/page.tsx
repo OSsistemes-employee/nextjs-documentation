@@ -34,7 +34,7 @@ export default async function PostPage({ params }) {
   return (
     <div className="min-h-screen flex justify-center bg-gray-100">
       <div className="w-64 bg-white p-4 h-screen">
-        {/* <SideMenu /> */}
+        <SideMenu />
         MENU
       </div>
       {/* <div className="layout-scrollbar flex items-center justify-center">
