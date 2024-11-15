@@ -34,7 +34,7 @@ export default async function PostPage({ params }) {
       </div>
       <div className="w-1 bg-gradient-to-b from-white via-gray-200 to-white"></div>
       <div className="flex-1 p-6 bg-white text-slate-900 max-w-3xl h-screen overflow-y-auto custom-scrollbar">
-        <div className="flex flex-col gap-4 markdown-body max-w-full mx-auto">
+        <div className="flex flex-col gap-4 max-w-full mx-auto">
           <div className="text-3xl font-bold">
             {slug.charAt(0).toUpperCase() + slug.slice(1)}
           </div>

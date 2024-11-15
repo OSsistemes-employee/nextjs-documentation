@@ -13,7 +13,7 @@ export default async function SideMenu() {
   const files = await getFilesList();
 
   return (
-    <div className="w-full max-w-[260px] px-1 py-8">
+    <div className="w-full max-w-[260px] px-1 py-8 text-black">
       <div className="space-y-2">
         <div className="text-xl font-bold">Menu Documentation</div>
         {files.map((file) => (
